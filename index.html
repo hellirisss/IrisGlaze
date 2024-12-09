@@ -22,36 +22,38 @@
         .tabs .indicator{
             background-color: #1a237e;
         }
+        .slider .indicators .indicator-item {
+  background-color:  #ffd8d9; 
+}
 
-	    .slider .slides li .caption {
-            background: rgba(255, 255, 255, 0.8);
-            padding: 10px;
-            border-radius: 10px;
-        }
 
-	.card {
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Default shadow */
-    padding: 20px; /* Adds space inside the card */
-    transition: box-shadow 0.3s ease; /* Smooth transition for shadow */
- 	 } 
+.slider .indicators .indicator-item.active {
+  background-color: #d00000; 
+}
 
-	.card:hover {
-    background-color: #f8f8f8; /* Light gray background on hover */
-    box-shadow: 0 8px 15px #e44f4f; /* Red shadow on hover */
-    cursor: pointer; /* Change cursor to pointer when hovering */
-   	 }
+.card {
+    border-radius: 10px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    padding: 20px; 
+    transition: box-shadow 0.3s ease; 
+  } 
+
+.card:hover {
+    background-color: #f8f8f8; 
+    box-shadow: 0 8px 15px #e44f4f; 
+    cursor: pointer; 
+    }
 
     .card-image img {
-  filter: brightness(0.7); /* Darkens the background image */
-	}
+  filter: brightness(0.7); 
+}
 
-	.card-content h4,
-	.card-content h5 {
-	  margin: auto;
-	}
+.card-content h4,
+.card-content h5 {
+  margin: auto;
+}
 
-	.card-content a {
+.card-content a {
   margin-top: 10px;
 }
     .animated-text {
@@ -65,21 +67,15 @@
       transform: translateY(0);
     }
 
-    /* Add some spacing for visual effect */
     .animated-text{
       text-align: center;
       padding: 50px;
     }
-        .tabs .tab a:focus, .tabs .tab a:focus.active{
-            background;
-        }
-
-        /* Section Animations */
+      
 .photo-section {
   margin-bottom: 4rem;
   overflow: hidden;
 }
-
 
 .fade-in {
   opacity: 0;
@@ -99,7 +95,7 @@
   animation: fadeInLeft 1s ease-in forwards;
 }
 
-/* Hover Effects */
+
 .hoverable {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -109,7 +105,7 @@
   box-shadow: 0px 4px 15px #d43232;
 }
 
-/* Keyframes for Animations */
+
 @keyframes fadeIn {
   to {
     opacity: 1;
@@ -131,7 +127,7 @@
   }
 }
 
-/* Responsive Adjustments */
+
 @media (max-width: 768px) {
   .right-align {
     text-align: left !important;
@@ -149,15 +145,18 @@
 
         #back-to-top {
       position: fixed;
-      bottom: 20px; /* Change to `top: 50%` for vertical centering */
+      bottom: 20px; 
       left: 50%;
-      transform: translateX(-50%); /* Or `translate(-50%, -50%)` for full centering */
-      display: none; /* Initially hidden */
-      z-index: 1000; /* Ensure it's above other elements */
+      transform: translateX(-50%); 
+      display: none; 
+      z-index: 1000; 
     }
     body {
-      height: 2000px; /* Add height for scrolling demo */
+      height: 2000px; 
     }
+   .pusa{
+    z-index: 9999;
+   }
     </style>
 
 </head>
@@ -167,12 +166,14 @@
 <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=GFS+Didot&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&family=Sofia&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
 
+<body>
+  
 
 <header>
     <nav class="nav-wrapper transparent">
       <div class="container center">
         <a href="index.html" class="brand-logo" style="display: flex; align-items: center;">
-            <img src="img/donut.png" alt="Iris & Glaze Donuts" style="height: 60px; width: auto; margin-left: 100px; margin-right: 10px;">
+            <img src="img/donut.png" alt="Iris & Glaze Donuts" style="height: 60px; width: auto; margin-left: 10px; margin-right:10px;">
             <span style="font-family: 'Playfair Display', cursive; font-size: 2rem; color: #d00000;">IrisGlaze</span>
           </a>
 
@@ -204,26 +205,20 @@
         </div>
     </nav>
 
-         <div class="slider">
-        <ul class="slides">
-            <li>
-                <img src="img/background.jpg" alt="Donut Background">
-                <div class="caption center-align">
-                    <h2 style="font-family: 'Playfair Display', cursive; color: #d00000;">
-                        Take A Sweet Stop at Iris & Glaze
-                    </h2>
-                    <h5 style="color: #d43232;">Experience a World of Delicious Donuts</h5>
-                    <h6 style="font-family: 'Quicksand', cursive; color: black;">
-                        Step into our donut haven, where every bite is a sweet adventure! The warm colors, the scent of freshly baked donuts,
-                        and the joyful atmosphere will make you feel right at home. Whether you’re here to indulge in our signature flavors, sip on a coffee, or just take a moment to relax, Iris & Glaze is the perfect place to unwind. Our cozy space is filled with the laughter of friends, the hum of creative energy, and the irresistible aroma of sugary delights. Come for the donuts, stay for the vibes—your perfect donut experience awaits!
-                    </h6>
-                </div>
-            </li>
-        </ul>
-   
+      <div class="slider">
+        <ul class="slides purple lighten-3">
+          <li>
+            <img src="img/background.jpg" class="pusa">
+            <div class="caption center-align">
+                <h2 style="font-family: 'Playfair Display', cursive; color: #d00000;"><br> Take A Sweet Stop at Iris & Glaze</h2>
+                <h5 style="color: #d43232;">Experience a World of Delicious Donuts</h5>
+                <h6 style="font-family: 'Quicksand', cursive; color:black;">Step into our donut haven, where every bite is a sweet adventure! The warm colors, the scent of freshly baked donuts,<br>
+                     and the joyful atmosphere will make you feel right at home. Whether you’re here to indulge in our signature flavors, sip on a coffee, or just take a moment to relax, Iris & Glaze is the perfect place to unwind. Our cozy space is filled with the laughter of friends, the hum of creative energy, and the irresistible aroma of sugary delights. Come for the donuts, stay for the vibes—your perfect donut experience awaits!</h6>
+            </div>
+          </li>
 
           <li>
-            <img src="img/background1.jpg">
+            <img src="img/background1.jpg" class="pusa">
             <div class="caption left-align">
                     <h2 style="font-family: 'Playfair Display', cursive; color: #d00000;">Discover Bliss at Iris & Glaze</h2>
                     <h5 style="color: #d43232;">Where Donuts and Dreams Collide</h5>
@@ -234,7 +229,7 @@
           </li>
           
           <li>
-            <img src="img/background2.jpg">
+            <img src="img/background2.jpg" class="pusa">
             <div class="caption right-align">
                 <h2 style="font-family: 'Playfair Display', cursive; color: #d00000;">Sweeten Your Day at Iris & Glaze</h2>
                 <h5 style="color: #d43232;">Where Every Bite is Pure Joy</h5>
@@ -304,7 +299,7 @@
     <div style=" font-family: 'Abril Fatface'; font-size: larger; color:#d00000" class="parallax-text center-align">
       <h1>Special Offer</h1>
       <h3>Get 50% Discount</h3>
-      <li><a style="color:#d00000" class="waves-effect waves-light btn  pink lighten-3" href="/OnOrders.html">Shop Now</a></li>
+      <li><a style="color:#d00000" class="waves-effect waves-light btn  pink lighten-3" href="OnOrders.html">Shop Now</a></li>
     </div>
     <!-- Parallax Image -->
 <div class="parallax">
@@ -441,7 +436,7 @@
 
         
     </div>
-  <a id="back-to-top" style="center-align" class="btn-floating btn-large waves-effect waves-light red lighten">
+  <a id="back-to-top" class="center-align btn-floating btn-large waves-effect waves-light red lighten">
     <i class="material-icons">arrow_upward</i>
   </a>
   <!-- Parallax Image -->
@@ -453,68 +448,33 @@
 
     <script src="js/jquery.js"></script>
     <script src="js/materialize.min.js"></script>
-
-		<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        // Initialize the slider
-        const slider = document.querySelector('.slider');
-        if (slider) {
-            M.Slider.init(slider, {
-                indicators: true,
-                height: 500,
-                duration: 500,
-                interval: 3000
-            });
-        }
-
-        // Initialize other Materialize components
-        const sidenav = document.querySelectorAll('.sidenav');
-        const materialbox = document.querySelectorAll('.materialboxed');
-        const parallax = document.querySelectorAll('.parallax');
-        const tabs = document.querySelectorAll('.tabs');
-        const datepicker = document.querySelectorAll('.datepicker');
-        const tooltipped = document.querySelectorAll('.tooltipped');
-        const scrollspy = document.querySelectorAll('.scrollspy');
-
-        if (sidenav) M.Sidenav.init(sidenav);
-        if (materialbox) M.Materialbox.init(materialbox);
-        if (parallax) M.Parallax.init(parallax);
-        if (tabs) M.Tabs.init(tabs);
-        if (datepicker) {
-            M.Datepicker.init(datepicker, {
+    <script>
+        $ (document).ready(function(){
+            $('.sidenav').sidenav();
+            $('.slider').slider();
+            $('.materialboxed').materialbox();
+            document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.parallax');
+    M.Parallax.init(elems);
+  });
+            $('.tabs').tabs();
+            $('.datepicker').datepicker({
                 disableWeekends: true
             });
-        }
-        if (tooltipped) M.Tooltip.init(tooltipped);
-        if (scrollspy) M.ScrollSpy.init(scrollspy);
+            $('.tooltipped').tooltip();
+            $('.scrollspy').scrollSpy();
+            $('animated-text').classList.add('show');
+        });
 
-        // Add the "show" class to animated text (if exists)
-        const animatedText = document.querySelector('.animated-text');
-        if (animatedText) {
-            animatedText.classList.add('show');
-        }
-    });
-</script>
 
-		<script>
-  // Animation trigger after page load
-  window.onload = () => {
-    const animatedText = document.getElementById('animated-text');
-    if (animatedText) {
-      setTimeout(() => {
-        animatedText.classList.add('show');
-      }, 1000); // Delay of 1 second (adjust as needed)
-    }
-  };
-</script>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const backToTopButton = document.getElementById('back-to-top');
-
-    // Ensure the button exists before adding event listeners
-    if (backToTopButton) {
-      // Show or hide the button based on scroll position
+      window.onload = () => {
+        setTimeout(() => {
+          document.getElementById('animated-text').classList.add('show');
+        }, 1000); 
+      };
+   
+    document.addEventListener('DOMContentLoaded'), function () {
+      const backToTopButton = document.getElementById('back-to-top');
       window.addEventListener('scroll', () => {
         if (window.scrollY > 200) {
           backToTopButton.style.display = 'block';
@@ -522,19 +482,14 @@
           backToTopButton.style.display = 'none';
         }
       });
-
-      // Scroll to top when button is clicked
+  
       backToTopButton.addEventListener('click', () => {
         window.scrollTo({
           top: 0,
-          behavior: 'smooth', // Smooth scrolling
-        });
+          behavior: 'smooth' 
       });
-    }
-  });
-</script>
-
-    
- 
-
+    });}
+  </script>
+  
+</body>
 </html>
