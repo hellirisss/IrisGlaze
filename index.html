@@ -453,42 +453,67 @@
 
     <script src="js/jquery.js"></script>
     <script src="js/materialize.min.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const slider = document.querySelector('.slider');
+
+		<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Initialize the slider
+        const slider = document.querySelector('.slider');
+        if (slider) {
             M.Slider.init(slider, {
                 indicators: true,
                 height: 500,
                 duration: 500,
                 interval: 3000
             });
-        $ (document).ready(function(){
-            $('.sidenav').sidenav();
-            $('.materialboxed').materialbox();
-            $('.parallax').parallax();
-            $('.tabs').tabs();
-            $('.datepicker').datepicker({
+        }
+
+        // Initialize other Materialize components
+        const sidenav = document.querySelectorAll('.sidenav');
+        const materialbox = document.querySelectorAll('.materialboxed');
+        const parallax = document.querySelectorAll('.parallax');
+        const tabs = document.querySelectorAll('.tabs');
+        const datepicker = document.querySelectorAll('.datepicker');
+        const tooltipped = document.querySelectorAll('.tooltipped');
+        const scrollspy = document.querySelectorAll('.scrollspy');
+
+        if (sidenav) M.Sidenav.init(sidenav);
+        if (materialbox) M.Materialbox.init(materialbox);
+        if (parallax) M.Parallax.init(parallax);
+        if (tabs) M.Tabs.init(tabs);
+        if (datepicker) {
+            M.Datepicker.init(datepicker, {
                 disableWeekends: true
             });
-            $('.tooltipped').tooltip();
-            $('.scrollspy').scrollSpy();
-            $('animated-text').classList.add('show');
-        });
-    </script>
+        }
+        if (tooltipped) M.Tooltip.init(tooltipped);
+        if (scrollspy) M.ScrollSpy.init(scrollspy);
 
-    <script>
-      // Animation trigger after page load
-      window.onload = () => {
-        setTimeout(() => {
-          document.getElementById('animated-text').classList.add('show');
-        }, 1000); // Delay of 1 second (adjust as needed)
-      };
-    </script>
-   
-   <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const backToTopButton = document.getElementById('back-to-top');
-  
+        // Add the "show" class to animated text (if exists)
+        const animatedText = document.querySelector('.animated-text');
+        if (animatedText) {
+            animatedText.classList.add('show');
+        }
+    });
+</script>
+
+		<script>
+  // Animation trigger after page load
+  window.onload = () => {
+    const animatedText = document.getElementById('animated-text');
+    if (animatedText) {
+      setTimeout(() => {
+        animatedText.classList.add('show');
+      }, 1000); // Delay of 1 second (adjust as needed)
+    }
+  };
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const backToTopButton = document.getElementById('back-to-top');
+
+    // Ensure the button exists before adding event listeners
+    if (backToTopButton) {
       // Show or hide the button based on scroll position
       window.addEventListener('scroll', () => {
         if (window.scrollY > 200) {
@@ -497,15 +522,19 @@
           backToTopButton.style.display = 'none';
         }
       });
-  
+
       // Scroll to top when button is clicked
       backToTopButton.addEventListener('click', () => {
         window.scrollTo({
           top: 0,
-          behavior: 'smooth' // Smooth scrolling
+          behavior: 'smooth', // Smooth scrolling
         });
       });
-    });
-  </script>
+    }
+  });
+</script>
+
+    
+ 
 
 </html>
