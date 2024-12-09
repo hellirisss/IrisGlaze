@@ -454,7 +454,14 @@
     <script src="js/jquery.js"></script>
     <script src="js/materialize.min.js"></script>
     <script>
-        $('.slider').slider();
+        document.addEventListener('DOMContentLoaded', function() {
+            const slider = document.querySelector('.slider');
+            M.Slider.init(slider, {
+                indicators: true,
+                height: 500,
+                duration: 500,
+                interval: 3000
+            });
         $ (document).ready(function(){
             $('.sidenav').sidenav();
             $('.materialboxed').materialbox();
